@@ -1,8 +1,10 @@
 import express from "express";
+import { validate } from "../middlewares/validate.js";
+import { RestaurantSchema } from "../schemas/restaurants.js";
 
 const appRouter = express.Router();
 
-appRouter.get("/", async (req, res) => {
+appRouter.get("/", validate(RestaurantSchema), async (req, res) => {
   res.status(200).json("Hello from restaurants");
 });
 
