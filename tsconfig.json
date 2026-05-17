@@ -16,6 +16,8 @@
     "module": "NodeNext",
     "outDir": "dist",
     "sourceMap": true,
-    "lib": ["es2022"],
+    "lib": [
+      "es2022"
+    ]
   }
 }
